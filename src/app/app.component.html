@@ -1,0 +1,14 @@
+<ngx-codemirror [(ngModel)]="content" [options]="{
+    lineNumbers: true,
+    theme: 'material',
+    mode: 'python',
+    smartIndent :true,
+    autofocus: true,
+    placeholder:'// Add Your Python Code , Press Ctr+Enter or Ctr+Space to auto complete',
+    extraKeys:{'Ctrl-Space':getSnippets, 'Ctrl-Enter':'autocomplete'}
+  }" (cursorActivity)="log()"></ngx-codemirror>
+
+
+
+<button (click)="buttonClieck()">Send</button>
+<button (click)="addSnippet()">Add</button>
